@@ -1,0 +1,53 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "array-bracket-spacing": "error",
+        "brace-style": "error",
+        "eol-last": "error",
+        "indent": ["error", 2],
+        "no-trailing-spaces": "error",
+        "object-curly-spacing": ["error", "always"],
+        "prefer-template": "error",
+        "quotes": ["error", "single"],
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".js", ".jsx"]
+        }],
+        "react/jsx-indent": ["error", 2, {
+            "checkAttributes": true,
+            "indentLogicalExpressions": true
+        }],
+        "react/jsx-indent-props": ["error", 2],
+        "react/jsx-sort-default-props": "error",
+        "react/jsx-sort-props": "error",
+        "react/prefer-es6-class": "error",
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "error",
+        "react/self-closing-comp": "error",
+        "react/sort-comp": "error",
+        "react/sort-prop-types": "error",
+        "semi": "error",
+        "sort-imports": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
