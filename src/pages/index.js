@@ -5,7 +5,11 @@ import Head from 'next/head';
 import Row from 'antd/lib/row';
 // import Typed from 'typed.js';
 import styles from '../styles/index.module.css';
-// import words from './words';
+
+// const words = [
+// 	'Krishan Patel',
+// 	'Software Developer'
+// ];
 
 class Home extends Component {
   // componentDidMount() {
