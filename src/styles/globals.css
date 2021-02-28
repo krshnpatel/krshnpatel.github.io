@@ -1,5 +1,12 @@
 @import "~antd/dist/antd.css";
 
-body {
-	background-color: #9E9E9E;
+.App {
+	background-color: aqua;
+}
+
+.typed-cursor {
+	white-space: pre;
+	font-family: monospace;
+	font-size: 26px;
+	color: #9E9E9E;
 }
