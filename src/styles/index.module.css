@@ -1,0 +1,19 @@
+.header {
+	background-color: #001529;
+	height: 250px;
+	padding-top: 20px;
+}
+
+.headerTitle {
+	white-space: pre;
+	font-family: monospace;
+	font-size: 50px;
+	font-weight: bold;
+	color: #9E9E9E !important;
+}
+
+.avatar {
+	height: 250px;
+	width: 250px;
+	margin-top: -125px;
+}
