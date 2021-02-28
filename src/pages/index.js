@@ -7,8 +7,8 @@ import Typed from 'typed.js';
 import styles from '../styles/index.module.css';
 
 const subHeaders = [
-	'I\'m a full-stack developer.^500',
-	'I\'m an automation developer.^500',
+  'I\'m a full-stack developer.^500',
+  'I\'m an automation developer.^500',
   'I\'m a fun guy.^1000'
 ];
 
@@ -19,7 +19,7 @@ class Home extends Component {
       typeSpeed: 60,
       backSpeed: 60,
       loop: true,
-      cursorChar: "|",
+      cursorChar: '|',
     };
     this.typed = new Typed(this.el, options);
   }
