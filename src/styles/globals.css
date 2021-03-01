@@ -6,3 +6,12 @@
 	font-size: 26px;
 	color: #9E9E9E;
 }
+
+@media screen and (max-width: 600px) {
+	.typed-cursor {
+		white-space: pre;
+		font-family: monospace;
+		font-size: 18px;
+		color: #9E9E9E;
+	}
+}
