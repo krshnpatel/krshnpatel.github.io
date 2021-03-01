@@ -29,3 +29,25 @@
 	text-align: center;
 	padding: 30px 15px;
 }
+
+@media screen and (max-width: 600px) {
+	.headerTitle {
+		font-family: monospace;
+		font-size: 40px;
+		font-weight: bold;
+		color: #9E9E9E;
+	}
+	
+	.subHeader {
+		white-space: pre;
+		font-family: monospace;
+		font-size: 18px;
+		color: #9E9E9E;
+		height: 70px;
+	}
+
+	.mediaButton {
+		text-align: center;
+		padding: 0 15px;
+	}
+}
