@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Avatar from 'antd/lib/avatar';
+import ButtonImage from '../components/ButtonImage';
 import Col from 'antd/lib/col';
 import Head from 'next/head';
 import Row from 'antd/lib/row';
@@ -10,6 +11,21 @@ const subHeaders = [
   'I\'m a full-stack developer.^500',
   'I\'m an automation developer.^500',
   'I\'m a fun guy.^1000'
+];
+
+const mediaButtons = [
+  {
+    fileName: 'github.png',
+    link: 'https://github.com/krshnpatel'
+  },
+  {
+    fileName: 'gmail.png',
+    link: 'mailto:krishanpatel09@gmail.com'
+  },
+  {
+    fileName: 'linkedin.png',
+    link: 'https://www.linkedin.com/in/krshnpatel/'
+  }
 ];
 
 class Home extends Component {
@@ -33,10 +49,10 @@ class Home extends Component {
       <div className="App">
         <Head>
           <title>Krishan Patel</title>
-          {/* <link rel="icon" href="/favicon.ico" /> */}
+          <link href="/assets/favicon.ico" rel="icon" />
         </Head>
-        <Row className={styles.header} justify="center">
-          <Col>
+        <Row className={styles.header}>
+          <Col span={24}>
             <Row justify="center">
               <Avatar className={styles.avatar} src="/assets/profile-pic.jpeg"/>
             </Row>
@@ -50,6 +66,18 @@ class Home extends Component {
                   this.el = el;
                 }}
               />
+            </Row>
+            <Row justify="center">
+              {
+                mediaButtons.map((media, index) => {
+                  const src = `/assets/${media.fileName}`;
+                  return (
+                    <Col className={styles.mediaButton} key={index}>
+                      <ButtonImage link={media.link} src={src} width="50px" />
+                    </Col>
+                  );
+                })
+              }
             </Row>
           </Col>
         </Row>

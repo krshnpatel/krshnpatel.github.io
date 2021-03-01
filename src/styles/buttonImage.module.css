@@ -1,0 +1,14 @@
+.button, .button:active, .button:focus {
+	height: max-content;
+	width: max-content;
+	background: #9E9E9E;
+	border-color: #9E9E9E;
+	border-radius: 8px;
+	padding: 8px !important;
+}
+
+.button:hover {
+	background: #696969;
+	border-color: #696969;
+	border-width: 4px;
+}
