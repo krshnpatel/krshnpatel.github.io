@@ -1,6 +1,18 @@
-.header {
+.main {
 	background-color: #001529;
 	height: 100vh;
+	padding-top: 5%;
+}
+
+.header {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+.headerMenu {
+	text-align: end;
+	font-size: 18px;
 }
 
 .avatar {
