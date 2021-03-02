@@ -3,9 +3,17 @@ import Avatar from 'antd/lib/avatar';
 import ButtonImage from '../components/ButtonImage';
 import Col from 'antd/lib/col';
 import Head from 'next/head';
+import Header from 'antd/lib/page-header';
+import Menu from 'antd/lib/menu';
 import Row from 'antd/lib/row';
 import Typed from 'typed.js';
 import styles from '../styles/index.module.css';
+
+const navigationButtons = [
+  { name: 'Home' },
+  { name: 'Portfolio' },
+  { name: 'Experience' }
+];
 
 const subHeaders = [
   'I\'m a full-stack developer.^500',
@@ -51,7 +59,16 @@ class Home extends Component {
           <title>Krishan Patel</title>
           <link href="/assets/favicon.ico" rel="icon" />
         </Head>
-        <Row className={styles.header}>
+        <Header className={styles.header}>
+          <Menu className={styles.headerMenu} mode="horizontal" theme="dark">
+            {
+              navigationButtons.map((button, index) => {
+                return <Menu.Item key={index}>{button.name}</Menu.Item>;
+              })
+            }
+          </Menu>
+        </Header>
+        <Row className={styles.main}>
           <Col span={24}>
             <Row justify="center">
               <Avatar className={styles.avatar} src="/assets/profile-pic.jpeg"/>
