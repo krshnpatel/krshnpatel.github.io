@@ -1,65 +1,11 @@
-.main {
-	background-color: #001529;
-	height: 100vh;
-	padding-top: 5%;
-}
-
-.header {
+.navbar {
 	position: fixed;
 	z-index: 1;
 	width: 100%;
+	padding: 0;
 }
 
-.headerMenu {
+.navbarMenu {
 	text-align: end;
 	font-size: 18px;
-}
-
-.avatar {
-	height: 250px;
-	width: 250px;
-	border: 10px solid #9E9E9E;
-	margin: 80px 0 20px 0;
-}
-
-.headerTitle {
-	font-family: monospace;
-	font-size: 50px;
-	font-weight: bold;
-	color: #9E9E9E;
-}
-
-.subHeader {
-	white-space: pre;
-	font-family: monospace;
-	font-size: 28px;
-	color: #9E9E9E;
-	height: 80px;
-}
-
-.mediaButton {
-	text-align: center;
-	padding: 30px 15px;
-}
-
-@media screen and (max-width: 600px) {
-	.headerTitle {
-		font-family: monospace;
-		font-size: 40px;
-		font-weight: bold;
-		color: #9E9E9E;
-	}
-	
-	.subHeader {
-		white-space: pre;
-		font-family: monospace;
-		font-size: 18px;
-		color: #9E9E9E;
-		height: 70px;
-	}
-
-	.mediaButton {
-		text-align: center;
-		padding: 0 15px;
-	}
 }
