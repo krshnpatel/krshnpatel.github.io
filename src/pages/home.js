@@ -45,7 +45,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div id="Home">
+      <div ref={this.props.innerRef}>
         <Row className={styles.home}>
           <Col span={24}>
             <Row justify="center">

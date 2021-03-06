@@ -6,7 +6,7 @@ import styles from '../styles/portfolio.module.css';
 class Portfolio extends Component {
   render() {
     return (
-      <div id="Portfolio">
+      <div ref={this.props.innerRef}>
         <Row className={styles.portfolio}>
           <Col span={24}>
             <Row justify="center">

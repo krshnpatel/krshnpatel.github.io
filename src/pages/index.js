@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import Head from 'next/head';
 import Header from 'antd/lib/page-header';
 import Home from './home';
@@ -6,13 +6,22 @@ import Menu from 'antd/lib/menu';
 import Portfolio from './portfolio';
 import styles from '../styles/index.module.css';
 
-const navigationButtons = [
-  { name: 'Home' },
-  { name: 'Portfolio' },
-  { name: 'Experience' }
-];
-
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.homeRef = createRef();
+    this.portfolioRef = createRef();
+    this.navigationButtons = [
+      { name: 'Home', ref: this.homeRef },
+      { name: 'Portfolio', ref: this.portfolioRef }
+    ];
+  }
+
+  navigate = (e) => {
+    const scrollOptions = { behavior: 'smooth' };
+    this.navigationButtons[e.key].ref.current.scrollIntoView(scrollOptions);
+  }
+
   render() {
     return (
       <div className="App">
@@ -23,14 +32,14 @@ class Main extends Component {
         <Header className={styles.navbar}>
           <Menu className={styles.navbarMenu} mode="horizontal" theme="dark">
             {
-              navigationButtons.map((button) => {
-                return <Menu.Item key={button.name}>{button.name}</Menu.Item>;
+              this.navigationButtons.map((button, index) => {
+                return <Menu.Item key={index} onClick={this.navigate}>{button.name}</Menu.Item>;
               })
             }
           </Menu>
         </Header>
-        <Home/>
-        <Portfolio/>
+        <Home innerRef={this.homeRef}/>
+        <Portfolio innerRef={this.portfolioRef}/>
       </div>
     );
   }
