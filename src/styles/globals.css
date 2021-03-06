@@ -15,3 +15,11 @@
 		color: #9E9E9E;
 	}
 }
+
+.ant-page-header-content {
+	padding: 0;
+}
+
+a > div.ant-image {
+	vertical-align: middle;
+}
